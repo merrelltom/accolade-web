@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 <div id="total-bar" style="display:none;position: fixed; top:0; left:0; height:15px; padding: 0 5px 0; background:black; text-align: center; color: white; line-height: 15px; font-size: 10px;">Running total:0, price: £0.00</div>
-<form method="get" name="accolade-pricing-form" id="accolade-pricing-form" onsubmit="return false;" action=" ">   
+<form method="get" name="accolade-pricing-form" id="accolade-pricing-form" action="">   
   
   <?php //// Start Screen //// 
     $screen = $page->children()->find('start-screen'); 
@@ -21,6 +21,41 @@
 
       </section>
     <?php endif; ?>
+
+  <?php //// Tophy Display //// 
+    $ID = 1;
+    $screen = $pages->findBy('id', $ID);
+    if($screen):?>
+    <section id="trophy-display" class="screen trophy-display simple">
+      <div class="screen-content">
+          <h2 class="screen-title large-text">Trophy:</h2>
+          <ul class="answers">
+            <li class="image-container">
+              <?php if ($thumb = $screen->featured_image()->toFile()):?>
+              <figure>
+                 <img class="img-contain trophy-image" srcset="
+                <?= $thumb->thumb(array('width' => 320))->url();?> 320w, 
+                <?= $thumb->thumb(array('width' => 640))->url();?> 640w, 
+                <?= $thumb->thumb(array('width' => 960))->url();?> 960w, 
+                <?= $thumb->thumb(array('width' => 1200))->url();?> 1200w"
+                sizes="(min-width: 1000px) 33vw, (min-width: 768px) 50vw, 100vw"
+                src="<?= $thumb->thumb(array('width' => 640))->url();?>"
+                >
+              </figure>
+              <?php endif;?>
+            </li> 
+            <li>Trophy ID: <?= $screen->id();?></li>
+            <li>Size: <?= $screen->size();?></li>
+            <input type="checkbox" name="id" value="<?= $screen->id();?>" class="invisible" checked>
+            <input type="checkbox" name="start" value="0" class="invisible" checked>
+          </ul>  
+        </div>
+        <div class="buttons">
+          <a class="prev button">Previous</a>
+          <a class="next button">Next</a>
+        </div>
+    </section>
+    <?php endif;?>
 
   <?php //// Post Code Screen //// ?>
 
@@ -57,36 +92,6 @@
     endif;
   ?>
 
-  <?php //// Trophy Selection //// ?>
-    <section id="trophy-selection" class="screen trophy-selection simple">
-      <div class="screen-content">
-          <h2 class="screen-title large-text">What size trophy are you interested in buying?</h2>
-            <span class="visuallyhidden">allow multiple:false</span>
-          <ul class="answers">
-                <li class="answer">
-              <label class="container">Small      <input name="What size trophy are you interested in buying?" value="small" type="radio">
-                <span class="checkmark"></span>
-              </label>
-            </li> 
-
-              <li class="answer">
-              <label class="container">Medium     <input name="What size trophy are you interested in buying?" value="medium" type="radio">
-                <span class="checkmark"></span>
-              </label>
-            </li> 
-
-              <li class="answer">
-              <label class="container">Large      <input name="What size trophy are you interested in buying?" value="large" type="radio">
-                <span class="checkmark"></span>
-              </label>
-            </li> 
-          </ul>  
-        </div>
-        <div class="buttons">
-          <a class="prev button">Previous</a>
-          <a class="next button">Next</a>
-        </div>
-    </section>
 
   <?php //// Intention ////
     $screen = $page->children()->find('screen-4-Intention'); 
@@ -329,7 +334,7 @@
 </form>
 
 
-  <?php //// Results Screen //// 
+<!--   <?php //// Results Screen //// 
     $screen = $page->children()->find('results-screen'); 
     if($screen):?>
       <section id="results-screen" class="screen results-screen">
@@ -379,20 +384,8 @@
         </div>
 
       </section>
-    <?php endif; ?>
+    <?php endif; ?> -->
 
-
-
-<div class="restart-wrapper">
-  <div class="restart-alert">
-    <div class="restart-alert-inner">
-      <h3>Timed Out</h3>
-      <p>Do you wish to continue?</p>
-      <div class="button-group">
-        <a class="button continue">Continue</a><a href="<?= $site->url();?>" id="restart" class="button restart">Restart</a>
-      </div>
-    </div>
-  </div>
 </div>
 
 <?php snippet('footer') ?>

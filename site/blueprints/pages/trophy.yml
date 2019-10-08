@@ -1,0 +1,45 @@
+# Each page blueprint must have a title, the title may be different from the file name
+# This default blueprint is used to display a page in the Panel whenever a custom page blueprint is missing.
+title: Trophy
+
+# Each page can have an icon that is shown in page listings when no preview image is available.
+icon: 📝
+
+# Custom descriptions of page statuses depending on use case
+# More about page statuses: https://getkirby.com/docs/reference/panel/blueprints/page#statuses
+status:
+  draft: true
+  unlisted:
+    label: Hidden Page
+    text: The page is not listed in the main menu
+  listed:
+    label: Menu Page
+    text: The page is listed in the main menu
+
+# A page preset can have a freely defined set of fields
+# List of all available field types: https://getkirby.com/docs/reference/panel/fields
+fields:
+  featured_image:
+      width: 2/3
+      label: Featured Image
+      type: files
+      layout: cards
+      size: small
+      min: 1
+      max: 1
+  id:
+      width: 2/3
+      label: Trophy ID
+      type: number
+  price:
+      width: 2/3
+      label: Base Price
+      type: number
+  size:
+      width: 2/3
+      label: Trophy Size
+      type: select
+      options:
+        small: Small
+        medium: Medium
+        large: Large

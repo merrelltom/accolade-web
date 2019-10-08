@@ -1,0 +1,23 @@
+Title: 1
+
+----
+
+Featured-image:
+
+- 0066799_golden-globe-trophy.jpg
+
+----
+
+Id: 1
+
+----
+
+Price: 200
+
+----
+
+Size: medium
+
+----
+
+Image: - 0066799_golden-globe-trophy.jpg

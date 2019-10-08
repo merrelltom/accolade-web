@@ -158,7 +158,17 @@ $(document).ready(function() {
 	*/
 
 	// tm_body.on('click', '.submit', calculatePrice);
-
+        tm_body.on('click', '.next', calculateScore);
+        
+        function calculateScore(){
+            score = 0;
+            $('input:checked').each(function(){
+                if ( $.isNumeric($(this).val()) ) {
+                    score += parseInt($(this).val());
+                }
+            });
+            $("#formScore".value(score));
+        }
 
 	function calculatePrice(){
 		complete = true;

@@ -31,6 +31,8 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
         $p = $rand_b * pow($m[2], $s);
     } else if ($s > $r[1]) {
         $p = $rand_b * pow($m[3], $s - $r[1]) * pow($m[3], $r[1]);
+    }else{
+      $p = 100;
     }
     
    
@@ -50,15 +52,15 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
 
       <div class="prices-wrapper">
         <p>Your personalised price valid for today:</p>
-        <p class="xl-text" id="results-price"><?php echo $p; ?></p>
+        <p class="xl-text" id="results-price"><?php $p = 100; echo $p;?></p>
       </div>
     </div>
   </div>
 
   <div class="buttons">
     <form id="payment_submit" action=''method='post'>
-    <a data-href="<?= $page->children()->find('pay-cashier')->url(); ?>" class="button left pay_cashier" id="pay_cashier">Pay at Cashier</a>
-    <a data-href="<?= $page->children()->find('online-payment-screen')->url(); ?>" class="button right pay_online" id="pay_online">Pay Online</a>
+    <a data-href="<?= $pages->find('pay-cashier')->url(); ?>" class="button left pay_cashier" id="pay_cashier">Pay at Cashier</a>
+    <a data-href="<?= $pages->find('online-payment-screen')->url(); ?>" class="button right pay_online" id="pay_online">Pay Online</a>
     <input type="hidden" name="final-price" value="$p">
     </form>
   </div>

@@ -157,7 +157,7 @@ $(document).ready(function() {
 	================================================================  
 	*/
 
-	tm_body.on('click', '.submit', calculatePrice);
+	// tm_body.on('click', '.submit', calculatePrice);
 
 
 	function calculatePrice(){
@@ -242,22 +242,22 @@ $(document).ready(function() {
 	*/
 
 
-	tm_body.on('change', 'input[type=radio][name=trophy-results]', function(){
-		if($(this).val() == 'small'){
-			price = smallPrice;
-                        size = $(this).val();
-		}
-		if($(this).val() == 'medium'){
-			price = mediumPrice;
-                        size = $(this).val();
-		}
-		if($(this).val() == 'large'){
-			price = largePrice;
-                        size = $(this).val();
-		}
-		var result = gen_result(price, size, score);
-		$("#results-price").html("£"+result);
-	});
+	// tm_body.on('change', 'input[type=radio][name=trophy-results]', function(){
+	// 	if($(this).val() == 'small'){
+	// 		price = smallPrice;
+ //                        size = $(this).val();
+	// 	}
+	// 	if($(this).val() == 'medium'){
+	// 		price = mediumPrice;
+ //                        size = $(this).val();
+	// 	}
+	// 	if($(this).val() == 'large'){
+	// 		price = largePrice;
+ //                        size = $(this).val();
+	// 	}
+	// 	var result = gen_result(price, size, score);
+	// 	$("#results-price").html("£"+result);
+	// });
         
     /*  
 	================================================================

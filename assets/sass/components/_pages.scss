@@ -77,7 +77,7 @@ body{
     border-top:2px solid black;
 }
 
-a.button{
+a.button, input.button{
     display: inline-block;
     width:50%;
     height:112px;
@@ -156,6 +156,18 @@ a.button{
 .show-restart .restart-wrapper{
     display: block;
 }
+
+/*  
+================================================================
+RESULTS PAGE
+================================================================  
+*/
+
+.results-screen{
+    display: block;
+}
+
+
 
 
 /*  

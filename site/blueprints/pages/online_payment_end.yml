@@ -1,0 +1,26 @@
+# Each page blueprint must have a title, the title may be different from the file name
+# This default blueprint is used to display a page in the Panel whenever a custom page blueprint is missing.
+title: Online Payment End Screen
+
+# Each page can have an icon that is shown in page listings when no preview image is available.
+icon: 📝
+
+columns:
+  - width: 2/4
+    fields:
+      success_subtitle:
+        label: Success Title 
+        type: textarea
+      success_body_text:
+        label: Success Body Text
+        type: textarea  
+        size: large
+  - width: 2/4
+    fields:
+      failed_subtitle:
+        label: Failed Title 
+        type: textarea
+      failed_body_text:
+        label: Failed Body Text
+        type: textarea  
+        size: large

@@ -1,0 +1,22 @@
+Title: What size trophy are you interested in buying?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Small 
+  answer_value: small
+-
+  answer_label: Medium
+  answer_value: medium
+-
+  answer_label: Large
+  answer_value: large
+
+----
+

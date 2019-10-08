@@ -1,0 +1,29 @@
+# Each page blueprint must have a title, the title may be different from the file name
+title: Question
+
+icon: 🖼 
+
+status:
+  draft: true
+  listed: true
+
+
+columns:
+  - width: 2/3
+    fields:
+      allow_multiple:
+        label: Allow Multiple
+        type: toggle
+        text: Allow multiple select?
+      answers:
+        label: Answers
+        type: structure
+        fields:
+          answer_label:
+            width: 3/4
+            label: Answer
+            type: text
+          answer_value:
+            width: 1/4
+            label: Value
+            type: number

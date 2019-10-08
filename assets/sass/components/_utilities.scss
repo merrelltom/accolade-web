@@ -1,0 +1,52 @@
+/* 	
+================================================================
+UTILITY CLASSES
+================================================================  
+*/
+
+
+.visuallyhidden { 
+  position: absolute; 
+  overflow: hidden; 
+  clip: rect(0 0 0 0); 
+  height: 1px; width: 1px; 
+  margin: -1px; padding: 0; border: 0; 
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    display:none;
+}
+
+.hidden{
+    visibility: hidden;
+}
+
+/*Background Sizing*/
+.cover{-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size:cover; background-repeat:no-repeat;background-position:center;}
+.contain{-webkit-background-size: contain;-moz-background-size: contain;-o-background-size: contain;background-size:contain; background-repeat:no-repeat;background-position:center;}
+
+.bk-top{background-position:top;}
+.bk-right{background-position:right;}
+.bk-bottom{background-position:bottom;}
+.bk-left{background-position:left;}

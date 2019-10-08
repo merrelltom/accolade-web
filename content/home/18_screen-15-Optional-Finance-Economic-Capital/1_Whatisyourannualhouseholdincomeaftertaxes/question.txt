@@ -1,0 +1,43 @@
+Title: What is your annual household income after taxes?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Under £10k
+  answer_value: 10
+-
+  answer_label: £10k - £25k
+  answer_value: 8
+-
+  answer_label: £25k - £50k
+  answer_value: 6
+-
+  answer_label: £50k - £100k
+  answer_value: 2
+-
+  answer_label: £100 - £200k
+  answer_value: -6
+-
+  answer_label: £200k - £300k
+  answer_value: -7
+-
+  answer_label: £300k - £400k
+  answer_value: -8
+-
+  answer_label: £400k - £500k
+  answer_value: -9
+-
+  answer_label: Over £500k 
+  answer_value: -10
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

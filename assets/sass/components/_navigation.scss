@@ -1,0 +1,251 @@
+/* 	
+================================================================
+HEADER
+================================================================  
+*/
+
+.site-header{
+  position:fixed;
+  top:0;
+  left:0;
+  height:48px;
+  width: 100vw;
+  background: $black;
+  z-index:999;
+  a, a:link, a:visited{
+    color: $white;
+  }
+  a:hover, a:active{
+    color: $orange;
+  }
+}
+
+.menu-button{
+  position: fixed;
+  top:0;
+  left:0;
+  width:48px;
+  height:48px;
+  padding:12px;
+  float:left;
+  cursor: pointer;
+}
+
+.site-title{
+  position: fixed;
+  top:0;
+  left:50%;
+  margin-left:-24px;
+  width:48px;
+  height:48px;
+  padding:9px;
+  cursor: pointer;
+}
+
+.language-select{
+  position: fixed;
+  top:0;
+  right:0;
+  width:auto;
+  height:48px;
+  padding:13px 12px;
+  font-family: "Champion Heavywt A", "Champion Heavywt B";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+
+/*  
+================================================================
+MENU
+================================================================  
+*/
+
+.menu--open .menu-overlay{
+  transform: translate(0,0);
+}
+
+.menu--open .overlay-mask{
+  left:0;
+  opacity:.75;
+}
+
+.close-menu{
+  width:48px;
+  height:48px;
+  padding:13px 11px 13px;
+  float:right;
+  cursor: pointer;
+}
+
+.menu-overlay{
+  display:flex;
+  flex-flow: column;
+  position: fixed;
+  top:0;
+  left:0;
+  width:100vw;
+  max-width:450px;
+  height: 100vh;
+  background: $orange;
+  overflow-y:scroll;
+  z-index: 2000;
+  transform: translate(-100%,0);
+  transition: transform 200ms ease-in;
+  a, a:link, a:visited{
+    font-family: "Champion Heavywt A", "Champion Heavywt B";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height:32px;
+    text-transform: uppercase;
+    color: $black;
+  }
+  a:hover, a:active{
+     opacity: .8;
+  }
+}
+
+.menu-overlay-inner{
+   flex: 1;
+}
+
+.menu-header{
+  width:100%;
+  height:48px;
+}
+
+.main-menu{
+  padding: 52px $flexboxgrid-outer-margin 12px;
+  li{
+    border-top:1px solid $black;
+  }
+  a{
+    display: block;
+    padding:13px 0 10px;
+  }
+}
+
+.menu-item-has-children{
+  position: relative;
+}
+
+.open-icon{
+  position: absolute;
+  right:0;
+  top:0;
+  height: 56px;
+  width:56px;
+  padding:20px;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+.open-icon-inner{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url('img/open-icon.svg');
+}
+
+.open-icon.selected{
+  transform: rotate(-45deg);
+}
+
+.sub-menu{
+  overflow:hidden;
+  padding-left:25%;
+  transition: height 200ms ease-in-out;
+  li:first-child{
+    border-top:none;
+  }
+  a, a:link, a:visited{
+    font-size: 24px;
+    line-height:24px;
+  }
+
+}
+
+.sub-menu.open{
+  border-top:1px solid black;
+}
+
+
+.search-form-container{
+  padding: 0 $flexboxgrid-outer-margin 52px;
+}
+
+
+.menu-overlay-footer{
+  padding: $flexboxgrid-outer-margin;
+}
+
+.social-media-icon{
+  width:32px;
+  height:32px;
+  display: inline-block;
+  margin-right:0px;
+}
+
+
+.overlay-mask{
+  width:100vw;
+  height:100vh;
+  position: fixed;
+  top:0;left:-100vw;
+  background:rgba(0,0,0, 1);
+  z-index:1000;
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+
+
+/*  
+================================================================
+FOOTER
+================================================================  
+*/
+
+.site-footer{
+  padding-top:$flexboxgrid-outer-margin;
+  a, a:link, a:visited{
+    color: $white;
+  }
+  a:hover, a:active{
+    color: $orange;
+  }
+}
+
+.site-footer hr{
+  padding-bottom: 1em;
+  border-color:rgba(240,240,247, .5);
+}
+
+.site-footer .social-media-icon{
+  width:26px;
+  height:26px;
+}
+
+.footer-social{
+  display:flex;
+}
+
+.footer-section{
+  padding-bottom: 1em;
+}
+
+.footer-menu li{
+  display: block;
+}
+
+.site-footer .open-icon{
+  display: none;
+}
+
+.site-footer p:last-child{
+  padding-bottom: 0;
+}

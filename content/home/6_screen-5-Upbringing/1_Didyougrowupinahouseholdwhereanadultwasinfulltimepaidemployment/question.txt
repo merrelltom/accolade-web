@@ -1,0 +1,31 @@
+Title: Did you grow up in a household where an adult was in full time paid employment?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Yes - managerial or professional (incl teacher; lawyers; accountants; engineers; architects; doctors)
+  answer_value: -10
+-
+  answer_label: Yes - skilled trade (incl. electricians; plumbers; builders; mechanics) 
+  answer_value: -5
+-
+  answer_label: Yes - administration and retail
+  answer_value: 0
+-
+  answer_label: Yes - unskilled
+  answer_value: 7
+-
+  answer_label: 'No'
+  answer_value: 10
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

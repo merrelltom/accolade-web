@@ -1,0 +1,20 @@
+# Each page blueprint must have a title, the title may be different from the file name
+title: Results Screen
+
+icon: 🖼
+
+status:
+  draft: true
+  listed: true
+
+
+columns:
+  - width: 2/3
+    fields:
+      subtitle:
+        label: Title 
+        type: text
+      body_text:
+        label: Body Text
+        type: textarea  
+        size: large

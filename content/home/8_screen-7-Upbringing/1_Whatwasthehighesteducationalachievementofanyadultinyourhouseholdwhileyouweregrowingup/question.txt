@@ -1,0 +1,34 @@
+Title: What was the highest educational achievement of any adult in your household while you were growing up?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Post Graduate Qualification
+  answer_value: -10
+-
+  answer_label: Degree
+  answer_value: -7
+-
+  answer_label: A Levels
+  answer_value: 0
+-
+  answer_label: GCSEs / O Levels
+  answer_value: 5
+-
+  answer_label: Other qualifications
+  answer_value: 5
+-
+  answer_label: No qualifications
+  answer_value: 7
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

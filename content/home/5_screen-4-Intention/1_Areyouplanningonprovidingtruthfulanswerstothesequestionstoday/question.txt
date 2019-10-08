@@ -1,0 +1,22 @@
+Title: Are you planning on providing truthful answers to these questions today?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: 'Yes'
+  answer_value: 10
+-
+  answer_label: 'No' 
+  answer_value: -10
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

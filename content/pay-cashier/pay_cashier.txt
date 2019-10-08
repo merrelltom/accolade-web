@@ -1,0 +1,9 @@
+Title: Pay Cashier
+
+----
+
+Subtitle: Please follow the instructions below to complete your purchase
+
+----
+
+Body-text: Please make a note of your unique purchase number and take this to a member of staff. They will be able to help you complete your purchase.

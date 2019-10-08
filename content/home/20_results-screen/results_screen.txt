@@ -1,0 +1,9 @@
+Title: Results Screen
+
+----
+
+Subtitle: Thank You
+
+----
+
+Body-text: Many thanks for taking part in this process. None of your responses have been stored. A personalised price based on the answers you have given is shown below.

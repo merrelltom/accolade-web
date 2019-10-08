@@ -1,0 +1,41 @@
+Title: How old are you?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+- 
+  answer_label: 18-25
+  answer_value: 10
+- 
+  answer_label: 26-35
+  answer_value: 6
+- 
+  answer_label: 36-45
+  answer_value: 4
+- 
+  answer_label: 46-55
+  answer_value: 0
+- 
+  answer_label: 56-65
+  answer_value: 0
+- 
+  answer_label: 66-75
+  answer_value: 2
+- 
+  answer_label: 76-85
+  answer_value: 4
+- 
+  answer_label: Over 86
+  answer_value: 10
+- 
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+
+Allow-multiple: false

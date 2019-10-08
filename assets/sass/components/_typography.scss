@@ -1,0 +1,163 @@
+@import "../base/variables";
+
+
+
+ 
+@font-face {
+  font-family: 'typ';
+  /*src: url('fonts/typ1451-regular.eot');*/
+  src: url('fonts/TMed.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'typ-b';
+  /*src: url('fonts/Typ1451-Bold.eot');*/
+  src: url('fonts/T-Bold.ttf') format('truetype');
+  font-weight: 700;
+}
+
+/*  
+================================================================
+FONTS
+================================================================  
+*/
+
+body{
+  font-family: 'typ';
+  font-style: normal;
+  font-weight: 400;
+  font-size:20px;
+  color: black;
+  line-height:1.2;
+}
+ 
+em, b, strong{
+  font-style: normal;
+  font-weight: 700;
+}
+
+
+
+::selection { background: $orange; }
+::-moz-selection { background: $orange; }
+::-webkit-selection { background: $orange; }
+
+
+
+/*  
+================================================================
+LINK STYLES
+================================================================  
+*/
+
+button{
+  padding:0;
+  background:transparent;
+  border:0;
+  outline:0;
+}
+
+a, a:link, a:visited{
+  color: blue;
+  text-decoration: underline;
+  cursor:pointer;
+  transition: all 200ms;
+}
+
+a:hover, a:active{
+  color: blue;
+  text-decoration: underline;
+  cursor:pointer;
+  transition: all 200ms;
+}
+
+
+
+
+/*  
+================================================================
+HEADINGS
+================================================================  
+*/
+
+h1, h2, h3, h4, h5, h6{
+  margin:0;
+  font-size: 1em;
+  font-family: 'typ';
+  font-style: normal;
+  font-weight: bold;
+  a, a:link, a:visited{
+  color: black;
+  text-decoration: none;
+  cursor:pointer;
+  }
+a:hover, a:active{
+  color: black;
+  text-decoration: none;
+  cursor:pointer;
+  }
+}
+
+.main-title{
+  font-size:72px;
+}
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+
+.large-text{
+  font-size:28px;
+}
+
+.xl-text{
+    font-size: 72px;
+}
+
+/*  
+================================================================
+RULES
+================================================================  
+*/
+
+hr{
+  margin:0;
+  padding-bottom:.5rem;
+}
+
+
+/*  
+================================================================
+PARAGRAPHS
+================================================================  
+*/
+
+p{
+  padding-bottom: .5em;
+  margin:0;
+}
+
+/*  
+================================================================
+ALIGNMENTS
+================================================================  
+*/
+
+.center{
+  text-align: center;
+}
+
+.right{
+  text-align: right;
+}
+
+
+/*  
+================================================================
+STYLES
+================================================================  
+*/
+
+
+

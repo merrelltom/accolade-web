@@ -1,0 +1,38 @@
+# Each page blueprint must have a title, the title may be different from the file name
+title: Screen
+
+icon: 🖼
+
+status:
+  draft: true
+  listed: true
+
+
+columns:
+  - width: 2/3
+    fields:
+      subtitle:
+        type: text
+  - width: 2/3
+    sections:
+      questions: 
+        type: pages
+        headline: Questions
+        template: question
+        empty: No posts yet
+  - width: 3/3
+    fields:
+      groups:
+        label: Question Groups
+        type: structure
+        fields:
+          group_questions:
+            width: 3/4
+            label: Questions
+            type: pages
+            query: page.children
+          questions_to_ask:
+            width: 1/4
+            label: Questions to ask
+            type: number
+            default: 0

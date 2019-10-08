@@ -1,0 +1,25 @@
+Title: Who takes the main responsibility for cleaning the toilets in your household?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Me
+  answer_value: 10
+-
+  answer_label: Somebody else
+  answer_value: -7
+-
+  answer_label: I don't know
+  answer_value: -10
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

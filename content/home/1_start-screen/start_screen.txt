@@ -1,0 +1,19 @@
+Title: Start Screen
+
+----
+
+Subtitle: Accolade
+
+----
+
+Body-text:
+
+Welcome to the online pricing algorithm for Accolade.   By answering a series of questions designed to measure various factors which effect a person’s chances of achieving societal success you will be presented with a personalised price adjusted according to the responses.  
+
+All questions are optional and those who might often find themselves penalised in the various games that society plays may be rewarded with significant discounts.
+
+Once you have been presented with the personalised price you can decide whether or not you would like to purchase the artwork.
+
+All data other than the final price and selected trophy size will be automatically deleted [insert time frame? Daily etc.].
+
+You must be 18 or over to participate.

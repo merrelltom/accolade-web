@@ -1,0 +1,64 @@
+/*  
+================================================================
+ACCORDION
+================================================================  
+*/
+
+.accordion{
+	position: relative;
+}
+
+.accordion-title{
+	cursor:pointer;
+}
+
+.accordion-content{
+/*	overflow:hidden;
+	height: 0;
+  	transition: height 200ms ease-in-out;*/
+}
+
+
+
+.open-icon-lg{
+  position: absolute;
+  right:15px;
+  top:0;
+  height: 56px;
+  width:56px;
+  padding:20px;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+.open-icon-wht-bld{
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-image: url('../img/open-icon-wht-bld.svg');
+}
+
+.open-icon-md{
+  position: absolute;
+  right:15px;
+  top:0;
+  height: 30px;
+  width:30px;
+  padding:10px;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+.open .open-icon-lg, .open .open-icon-md, .open .open-icon{
+  transform: rotate(-45deg);
+}
+
+.accordion-content {
+  overflow: hidden;
+  display: none;
+
+  &.show {
+    /*display: block;*/
+  }
+
+}

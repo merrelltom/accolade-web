@@ -1,0 +1,34 @@
+Title: How does the housework get done in your household?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: I don’t know
+  answer_value: -10
+-
+  answer_label: I do none or very little 
+  answer_value: -8
+-
+  answer_label: I do the minority 
+  answer_value: -4
+-
+  answer_label: I do the majority
+  answer_value: 7
+-
+  answer_label: I do it all 
+  answer_value: 10
+-
+  answer_label: There is a cleaner
+  answer_value: -6
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

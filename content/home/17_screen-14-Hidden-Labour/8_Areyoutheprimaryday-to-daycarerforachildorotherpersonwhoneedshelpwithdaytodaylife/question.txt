@@ -1,0 +1,22 @@
+Title: Are you the primary day-to-day carer for a child or other person who needs help with day to day life?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: 'Yes'
+  answer_value: 10
+-
+  answer_label: 'No' 
+  answer_value: 0
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

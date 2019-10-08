@@ -1,0 +1,113 @@
+# The site blueprint must have a title, the title may be different from the file name
+# The `site.yml` blueprint defines the look of the start page (Dashboard) of the Panel.
+title: Site
+
+# The site blueprint usually provides easy access to all main pages of the site.
+# In this example blueprint, we also show subpages of the `photography` and `notes` pages.
+# More about the site blueprint: https://getkirby.com/docs/reference/panel/blueprints/site
+
+# The layout of this form has two columns:
+columns:
+  # The first column has one section for the subpages of the `photography` page in card layout
+  # It reuses the pages section defined in `/site/blueprints/sections/albums.yml`
+  - width: 1/2
+    fields:
+      small_trophy_price:
+        label: Small Trophy Price
+        type: number
+        width: 1/3
+      medium_trophy_price:
+        label: Medium Trophy Price
+        type: number
+        width: 1/3
+      large_trophy_price:
+        label: Large Trophy Price
+        type: number
+        width: 1/3
+    # Price Variance
+      small_trophy_variance:
+        label: Small Trophy Variance
+        type: number
+        width: 1/3
+      medium_trophy_variance:
+        label: Medium Trophy Variance
+        type: number
+        width: 1/3
+      large_trophy_variance:
+        label: Large Trophy Variance
+        type: number
+        width: 1/3
+    # Gradients Small
+      small_gradient_1:
+        label: Small Gradient 1
+        type: number
+        width: 1/4
+      small_gradient_2:
+        label: Small Gradient 2
+        type: number
+        width: 1/4
+      small_gradient_3:
+        label: Small Gradient 3
+        type: number
+        width: 1/4
+      small_gradient_4:
+        label: Small Gradient 4
+        type: number
+        width: 1/4
+    # Gradients Medium
+      medium_gradient_1:
+        label: Medium Gradient 1
+        type: number
+        width: 1/4
+      medium_gradient_2:
+        label: Medium Gradient 2
+        type: number
+        width: 1/4
+      medium_gradient_3:
+        label: Medium Gradient 3
+        type: number
+        width: 1/4
+      medium_gradient_4:
+        label: Medium Gradient 4
+        type: number
+        width: 1/4
+    # Gradients Large
+      large_gradient_1:
+        label: Large Gradient 1
+        type: number
+        width: 1/4
+      large_gradient_2:
+        label: Large Gradient 2
+        type: number
+        width: 1/4
+      large_gradient_3:
+        label: Large Gradient 3
+        type: number
+        width: 1/4
+      large_gradient_4:
+        label: Large Gradient 4
+        type: number
+        width: 1/4
+    # Likely Range
+      likely_range_low:
+        label: Likely range low
+        type: number
+        width: 1/2
+      likely_range_high:
+        label: Likely range high
+        type: number
+        width: 1/2
+
+        
+  # The second column has two sections, `notes` and `pages`
+  - width: 1/2
+    sections:
+
+      # The `pages` pages section shows other main pages of the site
+      # Using the `templates` option, we limit which types of pages are shown
+      # Using the `create` option, we limit the type of page that can be created when a new page is created
+      # Note that the `sandbox` page and the `error` page that also exist in the content folder but use different blueprints thus do not show up in the list
+      # Since the error page's blueprint is set to `read: false`, it wouldn't show up here even if you added the error blueprint to the templates list
+      pages:
+        type: pages
+

@@ -1,0 +1,61 @@
+Title: Which of these cultural activities do you take part in?  Select all of the activities you do sometimes or often.
+
+----
+
+Allow-multiple: true
+
+----
+
+Answers:
+
+- 
+  answer_label: Go to stately homes
+  answer_value: -8
+- 
+  answer_label: Go to the opera
+  answer_value: -10
+- 
+  answer_label: Listen to jazz
+  answer_value: -6
+- 
+  answer_label: Listen to rock/indie
+  answer_value: -4
+- 
+  answer_label: Go to gigs
+  answer_value: -6
+- 
+  answer_label: Play video games
+  answer_value: 4
+- 
+  answer_label: Watch sports
+  answer_value: 2
+- 
+  answer_label: Go to the theatre
+  answer_value: -8
+- 
+  answer_label: Exercise / go to the gym
+  answer_value: -6
+- 
+  answer_label: Use facebook / twitter
+  answer_value: -3
+- 
+  answer_label: Socialise at home
+  answer_value: 0
+- 
+  answer_label: Go to museums / galleries
+  answer_value: -6
+- 
+  answer_label: Listen to classical music
+  answer_value: -8
+- 
+  answer_label: Do arts and crafts
+  answer_value: -4
+- 
+  answer_label: Watch dance or ballet
+  answer_value: -6
+- 
+  answer_label: Listen to hip-hop / rap
+  answer_value: 4
+- 
+  answer_label: Not applicable / rather not say
+  answer_value: 0

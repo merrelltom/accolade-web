@@ -1,0 +1,25 @@
+Title: Who do you think this artwork was created by?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: A child under 5
+  answer_value: 0
+-
+  answer_label: A professional artist
+  answer_value: 0
+-
+  answer_label: A Turner prize winning artist
+  answer_value: 0
+-
+  answer_label: An amateur artist
+  answer_value: 0
+-
+  answer_label: Not applicable - rather not say
+  answer_value: 0

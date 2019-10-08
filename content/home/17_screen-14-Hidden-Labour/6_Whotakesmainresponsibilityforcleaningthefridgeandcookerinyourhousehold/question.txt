@@ -1,0 +1,25 @@
+Title: Who takes main responsibility for cleaning the fridge and cooker in your household?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Me
+  answer_value: 10
+-
+  answer_label: Somebody else
+  answer_value: -8
+-
+  answer_label: I don't know
+  answer_value: -10
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

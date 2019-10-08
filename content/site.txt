@@ -1,0 +1,89 @@
+Title: Accolade
+
+----
+
+Small-trophy-price: 100
+
+----
+
+Medium-trophy-price: 200
+
+----
+
+Large-trophy-price: 300
+
+----
+
+Small-trophy-variance: 5
+
+----
+
+Medium-trophy-variance: 5
+
+----
+
+Large-trophy-variance: 5
+
+----
+
+Small-gradient-1: 0.1
+
+----
+
+Small-gradient-2: 1
+
+----
+
+Small-gradient-3: 2
+
+----
+
+Small-gradient-4: 0.1
+
+----
+
+Medium-gradient-1: 0.1
+
+----
+
+Medium-gradient-2: 1
+
+----
+
+Medium-gradient-3: 2
+
+----
+
+Medium-gradient-4: 0.1
+
+----
+
+Large-gradient-1: 0.1
+
+----
+
+Large-gradient-2: 1
+
+----
+
+Large-gradient-3: 2
+
+----
+
+Large-gradient-4: 0.1
+
+----
+
+Likely-range-high: 40
+
+----
+
+Likely-range-low: -40
+
+----
+
+Modifier: 1
+
+----
+
+Test: ww

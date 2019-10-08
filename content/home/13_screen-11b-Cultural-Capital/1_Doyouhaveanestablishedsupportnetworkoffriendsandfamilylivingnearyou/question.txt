@@ -1,0 +1,22 @@
+Title: Do you have an established support network of friends and family living near you?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: 'Yes'
+  answer_value: -10
+-
+  answer_label: 'No' 
+  answer_value: 10
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

@@ -1,0 +1,70 @@
+Title: Which of these people do you know socially?  Select all the people who you socialise with.
+
+----
+
+Allow-multiple: true
+
+----
+
+Answers:
+
+- 
+  answer_label: Secretary
+  answer_value: 0
+- 
+  answer_label: Nurse
+  answer_value: 6
+- 
+  answer_label: Teacher
+  answer_value: -6
+- 
+  answer_label: Cleaner
+  answer_value: 10
+- 
+  answer_label: University Lecturer
+  answer_value: -7
+- 
+  answer_label: Artist
+  answer_value: -4
+- 
+  answer_label: Electrician
+  answer_value: -4
+- 
+  answer_label: Office Manager
+  answer_value: 0
+- 
+  answer_label: Solicitor
+  answer_value: -8
+- 
+  answer_label: Farm Worker
+  answer_value: 4
+- 
+  answer_label: Chief Executive
+  answer_value: -9
+- 
+  answer_label: Software Designer
+  answer_value: -6
+- 
+  answer_label: Call centre worker
+  answer_value: 6
+- 
+  answer_label: Postal Worker
+  answer_value: 2
+- 
+  answer_label: Scientist
+  answer_value: -8
+- 
+  answer_label: Lorry Driver
+  answer_value: 8
+- 
+  answer_label: Accountant
+  answer_value: -8
+- 
+  answer_label: Shop Assistant
+  answer_value: 6
+- 
+  answer_label: Aristocrat
+  answer_value: -10
+- 
+  answer_label: Not applicable / rather not say
+  answer_value: 0

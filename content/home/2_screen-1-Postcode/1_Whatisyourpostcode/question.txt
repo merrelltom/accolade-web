@@ -1,0 +1,43 @@
+Title: What is your postcode?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Rural Residents
+  answer_value: 0
+-
+  answer_label: Cosmopolitans
+  answer_value: -15
+-
+  answer_label: Ethnicity Central
+  answer_value: 0
+-
+  answer_label: Multicultural Metropolitans
+  answer_value: -10
+-
+  answer_label: Urbanites 
+  answer_value: -5
+-
+  answer_label: Suburbanites
+  answer_value: 0
+-
+  answer_label: Constrained City Dwellers
+  answer_value: 5
+-
+  answer_label: Hard-Pressed Living
+  answer_value: 20
+-
+  answer_label: Some other answer/no response
+  answer_value: 0
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

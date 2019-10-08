@@ -1,0 +1,46 @@
+Title: Do you own or rent a property?
+
+----
+
+Allow-multiple: false
+
+----
+
+Answers:
+
+-
+  answer_label: Own under £125k
+  answer_value: 0
+-
+  answer_label: Own £125k - £250k
+  answer_value: -1
+-
+  answer_label: Own £250k - £500k
+  answer_value: -2
+-
+  answer_label: Own £500k - £600k
+  answer_value: -4
+-
+  answer_label: Own £600k - £700k
+  answer_value: -5
+-
+  answer_label: Own £700k - £800k
+  answer_value: -6
+-
+  answer_label: Own £800k - £900 k
+  answer_value: -7
+-
+  answer_label: Own £900k - £1m
+  answer_value: -8
+-
+  answer_label: Own over £1m
+  answer_value: -9
+-
+  answer_label: Rent
+  answer_value: 10
+-
+  answer_label: Not applicable / rather not say
+  answer_value: 0
+
+----
+

@@ -162,12 +162,13 @@ $(document).ready(function() {
         
         function calculateScore(){
             score = 0;
+            $("#formScore").val(score);
             $('input:checked').each(function(){
                 if ( $.isNumeric($(this).val()) ) {
                     score += parseInt($(this).val());
                 }
             });
-            $("#formScore".value(score));
+            $("#formScore").val(score);
         }
 
 	function calculatePrice(){

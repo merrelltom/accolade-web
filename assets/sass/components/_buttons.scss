@@ -47,6 +47,14 @@ input[type="text"], input[type="email"]{
 	width:100%
 }
 
+
+input[type="submit"].next{
+    font-family: 'typ';
+    font-size: 100%;
+    font-weight:bold;
+    border:2px solid black;
+}
+
 .input::placeholder {
     color:#ccc;
 }

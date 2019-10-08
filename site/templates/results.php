@@ -8,17 +8,17 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
    $id = intval(filter_input(INPUT_POST, "id", FILTER_SANITIZE_STRING, FILTER_FLAG_STRIP_HIGH | FILTER_FLAG_STRIP_LOW)); 
    $trophy = $pages->findBy('id', $id);
    $size = $trophy->size();
-   $b = $trophy->price();
-   $r = array($site->likely_range_low(), $site->likely_range_high());
+   $b = $trophy->price()->toInt();
+   $r = array($site->likely_range_low()->toInt(), $site->likely_range_high()->toInt());
    if ($size == "small") {
-       $v = $site->small_trophy_variance();
-       $m = array($site->small_gradient_1(), $site->small_gradient_2(), $site->small_gradient_3(), $site->small_gradient_4());
+       $v = $site->small_trophy_variance()->toInt();
+       $m = array($site->small_gradient_1()->toInt(), $site->small_gradient_2()->toInt(), $site->small_gradient_3(), $site->small_gradient_4()->toInt());
    } else if ($size == "medium") {
-       $v = $site->medium_trophy_variance();
-       $m = array($site->medium_gradient_1(), $site->medium_gradient_2(), $site->medium_gradient_3(), $site->medium_gradient_4());
+       $v = $site->medium_trophy_variance()->toInt();
+       $m = array($site->medium_gradient_1()->toInt(), $site->medium_gradient_2()->toInt(), $site->medium_gradient_3()->toInt(), $site->medium_gradient_4()->toInt());
    } else {
-       $v = $site->large_trophy_variance();
-       $m = array($site->large_gradient_1(), $site->large_gradient_2(), $site->large_gradient_3(), $site->large_gradient_4());
+       $v = $site->large_trophy_variance()->toInt();
+       $m = array($site->large_gradient_1()->toInt(), $site->large_gradient_2()->toInt(), $site->large_gradient_3(), $site->large_gradient_4()->toInt());
    }
    
    $s = 0 - $score;
@@ -51,8 +51,9 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
       </ul>
 
       <div class="prices-wrapper">
+        <?= $score;?><br><?= $b;?>
         <p>Your personalised price valid for today:</p>
-        <p class="xl-text" id="results-price"><?php $p = 100; echo $p;?></p>
+        <p class="xl-text" id="results-price"><?php echo $p;?></p>
       </div>
     </div>
   </div>

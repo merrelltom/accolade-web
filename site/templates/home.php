@@ -46,7 +46,6 @@
             </li> 
             <li>Trophy ID: <?= $screen->id();?></li>
             <li>Size: <?= $screen->size();?></li>
-            <input type="checkbox" name="id" value="<?= $screen->id();?>" class="invisible" checked>
             <input type="checkbox" name="start" value="0" class="invisible" checked>
           </ul>  
         </div>
@@ -323,8 +322,9 @@
             </div>
             <div class="buttons">
               <a class="prev button">Previous</a>
-              <input type="checkbox" name="score" value="0" class="invisible" checked>
-              <input type="submit" class="next button submit">Submit Answers</a>
+              <input type="number" id="id" value="<?= $ID;?>" name="id" class="invisible">
+              <input type="number" id="formScore" value="0" name="score"  class="invisible">
+              <input type="submit" class="next button submit">
             </div>
 
           </section>

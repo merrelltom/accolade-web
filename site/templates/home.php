@@ -1,6 +1,6 @@
 <?php snippet('header') ?>
 <div id="total-bar" style="display:none;position: fixed; top:0; left:0; height:15px; padding: 0 5px 0; background:black; text-align: center; color: white; line-height: 15px; font-size: 10px;">Running total:0, price: £0.00</div>
-<form method="get" name="accolade-pricing-form" id="accolade-pricing-form" action="">   
+<form method="get" name="accolade-pricing-form" id="accolade-pricing-form" action="<?= $pages->find('results-page')->url();?>">   
   
   <?php //// Start Screen //// 
     $screen = $page->children()->find('start-screen'); 

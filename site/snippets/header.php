@@ -1,4 +1,3 @@
-<?php if (!$kirby->user()) go('/') ?>
 <!doctype html>
 <html lang="en">
 <head>

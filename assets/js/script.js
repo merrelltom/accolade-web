@@ -277,53 +277,5 @@ $(document).ready(function() {
                
         });
 
-	/*  
-	================================================================
-	TIMER AND RESET
-	================================================================  
-	*/
-
-	timer();
-
-	$(window).on('click tapstart scroll', _.throttle(function(){prevTime = 0;}, 200));
-
-	if($('#online-payment-screen').length || complete == true){
-		started = 1;
-		timeOutTime = 90000;
-		restartTime = 120000;
-	}
-
-	if($('#payment-form').length){
-		timeOutTime = 3000000;
-		restartTime = 3000000;
-	}
-
-	function timer(){
-		var currentTime = new Date().getTime();
-		// console.log(prevTime - currentTime );
-		if (prevTime == 0){
-				prevTime = new Date().getTime();
-			}
-		if(currentTime - prevTime > timeOutTime && started == 1){
-			tm_body.addClass('show-restart');
-		}
-		if(currentTime - prevTime > restartTime && started == 1){
-			restart();
-		}
-		t = setTimeout(function(){ timer() }, 1000);
-	}
-
-	function restart(){
-		var url = $('#restart').attr('href');
-		window.location.replace(url);
-	}
-
-	function continueSesh(){
-		tm_body.removeClass('show-restart');
-	}
-
-	tm_body.on('click', '.continue', continueSesh);
-	tm_body.on('click', '.restart', restart);
-
 
 });/*CLOSE*/

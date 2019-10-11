@@ -31,11 +31,8 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
         $p = $rand_b * pow($m[2], $s);
     } else if ($s > $r[1]) {
         $p = $rand_b * pow($m[3], $s - $r[1]) * pow($m[3], $r[1]);
-    }else{
-      $p = 100;
     }
     
-   
 }
 
 ?>

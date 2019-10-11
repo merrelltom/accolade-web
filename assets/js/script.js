@@ -137,7 +137,7 @@ $(document).ready(function() {
                     running_total += parseInt($(this).val());
                 }
             });
-            document.getElementById("total-bar").innerHTML = "Running total:" + running_total + ", price: £" + gen_result(price, size, running_total);
+            // document.getElementById("total-bar").innerHTML = "Running total:" + running_total + ", price: £" + gen_result(price, size, running_total);
 		}
 
 	});

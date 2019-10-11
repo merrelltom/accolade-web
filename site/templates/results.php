@@ -7,7 +7,7 @@ $db = new SQLite3('assets/db/simple_postcode.db', SQLITE3_OPEN_READWRITE);
 $statement = $db->prepare("SELECT count(*) from results where date_time = ? and paid = 1");
 date_default_timezone_set("Europe/London");
 $timestamp = date("Y/m/d");
-$statement->bindValue(1, $timestamp);
+$statement->bindValue(0, $timestamp);
 $result = $statement->execute();
 $paid_today = $result->fetchArray();
 if ($paid_today[0] == 0) {  
@@ -163,7 +163,18 @@ if ($paid_today[0] == 0) {
 
 <?= js(['assets/js/stripe_pay.js']);
 } else {
-    echo "Trophy already purchased";
-}              
-?>
-<?php snippet('footer') ?>
+//    
+//    No Trophy Available:
+//    
+        $screen = $page->siblings()->findByUri('trophy-already-purchased');
+        if($screen):?>
+        <section id="start-screen" class="screen start-screen selected">
+          <div class="screen-content">
+            <h2 class="screen-title large-text"><?= $screen->title();?></h2>
+            <div class="answers">
+              <?= $screen->text()->kt() ?>
+            </div>
+          </div>
+        </section>
+        <?php endif;?>
+<?php } snippet('footer') ?>

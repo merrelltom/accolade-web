@@ -1,0 +1,5 @@
+Title: Trophy Already Purchased
+
+----
+
+Text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus diam, cursus id mollis bibendum, ornare pharetra leo. Mauris malesuada at nisl non pharetra. Pellentesque auctor vitae eros in porta.

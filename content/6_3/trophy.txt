@@ -1,0 +1,19 @@
+Title: 3
+
+----
+
+Featured-image:
+
+- image.jpg
+
+----
+
+Id: 3
+
+----
+
+Price: 150
+
+----
+
+Size: small

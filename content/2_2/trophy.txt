@@ -1,0 +1,23 @@
+Title: 2
+
+----
+
+Featured-image:
+
+- gettyimages-10173389641.jpg
+
+----
+
+Id: 2
+
+----
+
+Price: 300
+
+----
+
+Size: large
+
+----
+
+Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras lectus diam, cursus id mollis bibendum, ornare pharetra leo. Mauris malesuada at nisl non pharetra. Pellentesque auctor vitae eros in porta.

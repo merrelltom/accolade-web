@@ -25,7 +25,7 @@
     <div class="answers">
       <p>Your purchase number is:</p>
       <p id="payment-number" class="xl-text">
-      <?php if (isset($_POST['id'])) {
+      <?php if (isset($_POST['customer_id'])) {
           $id = filter_input(INPUT_POST, "customer_id");
           $db = new SQLite3('assets/db/simple_postcode.db', SQLITE3_OPEN_READWRITE);
           $statement = $db->prepare("UPDATE results set paid=1 WHERE id=:id");
@@ -39,21 +39,7 @@
       <?= $body;?>
     </div>
   </div>
-  <div class="buttons">
-    <a href="<?= $site->url();?>" class="left button">Restart</a>
-  </div>
 </section>
 
-<div class="restart-wrapper">
-  <div class="restart-alert">
-    <div class="restart-alert-inner">
-      <h3>Timed Out</h3>
-      <p>Do you wish to continue?</p>
-      <div class="button-group">
-        <a class="button continue">Continue</a><a href="<?= $site->url();?>" id="restart" class="button restart">Restart</a>
-      </div>
-    </div>
-  </div>
-</div>
 
 <?php snippet('footer') ?>

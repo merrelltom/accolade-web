@@ -79,6 +79,16 @@ input[type="submit"].next{
     margin-bottom:20px;
 }
 
+.payment-submit-button:hover{
+    background-color:limegreen;
+    transition: all 200ms;
+    cursor: pointer;
+}
+
+.payment-submit-button{
+    transition: all 200ms;
+}
+
 /*  
 ================================================================
 CHECKBOXES

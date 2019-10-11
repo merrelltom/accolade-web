@@ -97,7 +97,11 @@ columns:
         label: Likely range high
         type: number
         width: 1/2
-
+    # Price Variance
+      shipping_price:
+        label: Shipping Price
+        type: number
+        width: 1/2
         
   # The second column has two sections, `notes` and `pages`
   - width: 1/2

@@ -55,7 +55,7 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
     
     $p = round($p, 2);
     $shipping = $site->shipping_price()->toInt();
-    $total_price = $price + $shipping;
+    $total_price = $p + $shipping;
 //  
 //    Insert into database:
 //    
@@ -75,8 +75,6 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
 //  Stripe create payment intent
 //
     require_once('assets/php/stripe-php/init.php'); ?>
-    <section id="online-payment-screen" class="screen online-payment-screen selected">
-          <div class="screen-content">
     <?php
        require_once('assets/php/stripe_env.php');
         \Stripe\Stripe::setApiKey('sk_test_5uh8JHy65XEfqeZjrHmMqczn00Tmhto1Vt');
@@ -94,65 +92,67 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
   <div class="screen-content">
     <h1 class="main-title screen-title"><?= $page->subtitle();?></h1>
 
-    <div class="answers">
-      <?= $page->body_text()->kirbyText();?>
-      <ul id="results-list" class="answers invisible">
-
-      </ul>
-
-      <div class="prices-wrapper">
-        <?= $score;?><br><?= $b;?>
-        <p>Your personalised price valid for today:</p>
-        <p class="xl-text" id="results-price">Trophy Price:<?php echo $p;?></p>
-        <p class="xl-text">Shipping:<?php echo $shipping;?></p>
-        <p class="xl-text">Total:<?php echo $total_price;?></p>
+    <?php if($page->body_text()):?>
+      <div class="answers">
+        <?= $page->body_text()->kirbyText();?>
       </div>
+    <?php endif;?>
+
+    <div class="answers">
+        <p>Your personalised price:<br><br></p>
+        <hr>
+        <ul>
+          <li id="results-price">Trophy Price: £<?php echo $p;?></li>
+          <li>Shipping: £<?php echo $shipping;?></li>
+          <li><b>Total: £<?php echo $total_price;?></b></li>
+        </ul>
     </div>
-  </div>
 
-  <div class="buttons">
-    <form action="./online-payment-end-screen" method="post" id="payment-form" class="answers">
-        <h3 class="subtitle">Payment Details:</h3><br>
-        <div class="input-wrapper"> 
-          <input id="cardholder-name" type="text" class="payment-form-input" placeholder="Carholder's Name">
-        </div>
 
-        <div class="input-wrapper">
-          <input id="cardholder-email" type="text" class="payment-form-input" placeholder="Email Address">
-        </div>
-        
-        <div class="input-wrapper">
-          <input id="cardholder-address1" required type="text" class="payment-form-input" placeholder="Address Line 1">
-        </div>        
-        <div class="input-wrapper">
-          <input id="cardholder-address2" type="text" class="payment-form-input" placeholder="Address Line 2">
-        </div>        
-        <div class="input-wrapper">
-          <input id="cardholder-city" type="text" class="payment-form-input" placeholder="City">
-        </div>
-        <div class="input-wrapper">
-          <input id="cardholder-county" type="text" class="payment-form-input" placeholder="County">
-        </div>
-        <div class="input-wrapper">
-          <input id="cardholder-postcode" required type="text" class="payment-form-input" placeholder="Postcode">
-        </div>
-        <div class="input-wrapper">
-          <input id="cardholder-phone" type="text" class="payment-form-input" placeholder="Contact telephone number">
-        </div>
+    <div class=" ">
+      <form action="./online-payment-end-screen" method="post" id="payment-form" class="answers">
+          <h3 class="subtitle">Payment Details:</h3><br>
+          <div class="input-wrapper"> 
+            <input id="cardholder-name" type="text" class="payment-form-input" placeholder="Carholder's Name">
+          </div>
 
-        <input name="customer_id" type="hidden" value="<?php echo $customer_id; ?>">
-        <!-- placeholder for Elements -->
-        <div id="card-element" class="card-wrapper"></div>
-        <!-- Used to display form errors. -->
-        <div id="card-errors" role="alert"></div>
+          <div class="input-wrapper">
+            <input id="cardholder-email" type="text" class="payment-form-input" placeholder="Email Address">
+          </div>
+          
+          <div class="input-wrapper">
+            <input id="cardholder-address1" required type="text" class="payment-form-input" placeholder="Address Line 1">
+          </div>        
+          <div class="input-wrapper">
+            <input id="cardholder-address2" type="text" class="payment-form-input" placeholder="Address Line 2">
+          </div>        
+          <div class="input-wrapper">
+            <input id="cardholder-city" type="text" class="payment-form-input" placeholder="City">
+          </div>
+          <div class="input-wrapper">
+            <input id="cardholder-county" type="text" class="payment-form-input" placeholder="County">
+          </div>
+          <div class="input-wrapper">
+            <input id="cardholder-postcode" required type="text" class="payment-form-input" placeholder="Postcode">
+          </div>
+          <div class="input-wrapper">
+            <input id="cardholder-phone" type="text" class="payment-form-input" placeholder="Contact telephone number">
+          </div>
 
-        <button id="card-button" class="payment-submit-button" data-secret="<?= $intent->client_secret ?>">
-          Submit Payment
-        </button>
-    </form>
+          <input name="customer_id" type="hidden" value="<?php echo $customer_id; ?>">
+          <!-- placeholder for Elements -->
+          <div id="card-element" class="card-wrapper"></div>
+          <!-- Used to display form errors. -->
+          <div id="card-errors" role="alert"></div>
+
+          <button id="card-button" class="payment-submit-button" data-secret="<?= $intent->client_secret ?>">
+            Submit Payment
+          </button>
+      </form>
+    </div>
   </div>
 
 </section>
 
-
+<?= js(['assets/js/stripe_pay.js']) ?>
 <?php snippet('footer') ?>

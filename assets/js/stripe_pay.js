@@ -29,7 +29,7 @@ form.addEventListener('submit', function(event) {
               line1: address1.value,
               line2: address2.value,
               city: city.value,
-              county: county.value
+              state: county.value
           },
           phone: phone.value
       }

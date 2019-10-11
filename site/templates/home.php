@@ -2,10 +2,10 @@
 //Get available trophy:
 $db = new SQLite3('assets/db/simple_postcode.db', SQLITE3_OPEN_READWRITE);
 $statement = $db->prepare("SELECT trophy_id FROM results WHERE paid = 1 ORDER BY trophy_id DESC LIMIT 1");
-$statement->execute();
+$result = $statement->execute();
 $id_val = $result->fetchArray(SQLITE3_ASSOC);
 if (array_key_exists('trophy_id', $id_val)) {
-    $id = ($id_val['trophy_id']);
+    $id = ($id_val['trophy_id']) + 1;
 } else {
     $id = 1;
 }
@@ -39,7 +39,7 @@ if (array_key_exists('trophy_id', $id_val)) {
     if($screen):?>
     <section id="trophy-display" class="screen trophy-display simple">
       <div class="screen-content">
-          <h2 class="screen-title large-text">Trophy:</h2>
+          <h2 class="screen-title large-text">Available Trophy:</h2>
           <ul class="answers">
             <li class="image-container">
               <?php if ($thumb = $screen->featured_image()->toFile()):?>
@@ -55,8 +55,9 @@ if (array_key_exists('trophy_id', $id_val)) {
               </figure>
               <?php endif;?>
             </li> 
-            <li>Trophy ID: <?= $screen->id();?></li>
-            <li>Size: <?= $screen->size();?></li>
+            <?php if ($screen->description()):?>
+            <li><?= $screen->description();?></li>
+            <?php endif;?>
             <input type="checkbox" name="start" value="0" class="invisible" checked>
           </ul>  
         </div>
@@ -333,7 +334,7 @@ if (array_key_exists('trophy_id', $id_val)) {
             </div>
             <div class="buttons">
               <a class="prev button">Previous</a>
-              <input type="number" id="id" value="<?= $ID;?>" name="id" class="invisible">
+              <input type="number" id="id" value="<?= $id;?>" name="id" class="invisible">
               <input type="number" id="formScore" value="0" name="score"  class="invisible">
               <input type="submit" class="next button submit">
             </div>

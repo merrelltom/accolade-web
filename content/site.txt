@@ -74,11 +74,15 @@ Large-gradient-4: 0.1
 
 ----
 
+Likely-range-low: -40
+
+----
+
 Likely-range-high: 40
 
 ----
 
-Likely-range-low: -40
+Shipping-price: 10
 
 ----
 

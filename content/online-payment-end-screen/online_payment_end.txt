@@ -9,7 +9,7 @@ Thank you for paying online
 
 ----
 
-Success-body-text: You will receive an email receipt shortly. Please make a note of your unique purchase number and take this to a member of staff. They will be able to help you complete your purchase.
+Success-body-text: You will receive an email receipt shortly.
 
 ----
 
@@ -17,4 +17,4 @@ Failed-subtitle: Payment Error
 
 ----
 
-Failed-body-text: Sorry something has gone wrong and we could not complete your purchase online. Please make a note of your unique purchase number and take this to a member of staff. They will be able to help you complete your purchase.
+Failed-body-text: Sorry something has gone wrong and we could not complete your purchase online.

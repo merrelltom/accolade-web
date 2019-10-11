@@ -43,3 +43,8 @@ fields:
         small: Small
         medium: Medium
         large: Large
+  description:
+    width: 2/3
+    label: Description
+    type: textarea
+    size: large

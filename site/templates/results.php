@@ -12,13 +12,22 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
    $r = array($site->likely_range_low()->toInt(), $site->likely_range_high()->toInt());
    if ($size == "small") {
        $v = $site->small_trophy_variance()->toInt();
-       $m = array($site->small_gradient_1()->toInt(), $site->small_gradient_2()->toInt(), $site->small_gradient_3(), $site->small_gradient_4()->toInt());
+       $m = array(1 + $site->small_gradient_1()->toInt()/ 100, 
+           1 + $site->small_gradient_2()->toInt()/ 100, 
+           1 + $site->small_gradient_3()/ 100, 
+           1 + $site->small_gradient_4()->toInt())/ 100;
    } else if ($size == "medium") {
        $v = $site->medium_trophy_variance()->toInt();
-       $m = array($site->medium_gradient_1()->toInt(), $site->medium_gradient_2()->toInt(), $site->medium_gradient_3()->toInt(), $site->medium_gradient_4()->toInt());
+       $m = array(1 + $site->medium_gradient_1()->toInt()/ 100, 
+           1 + $site->medium_gradient_2()->toInt()/ 100, 
+           1 + $site->medium_gradient_3()->toInt()/ 100, 
+           1 + $site->medium_gradient_4()->toInt())/ 100;
    } else {
        $v = $site->large_trophy_variance()->toInt();
-       $m = array($site->large_gradient_1()->toInt(), $site->large_gradient_2()->toInt(), $site->large_gradient_3(), $site->large_gradient_4()->toInt());
+       $m = array(1 + $site->large_gradient_1()->toInt() / 100, 
+           1 + $site->large_gradient_2()->toInt()/ 100, 
+           1 + $site->large_gradient_3()/ 100, 
+           1 + $site->large_gradient_4()->toInt())/ 100;
    }
    
    $s = 0 - $score;

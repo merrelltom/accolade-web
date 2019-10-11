@@ -33,6 +33,7 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
    foreach ($m as &$value) {
        $value = 1 + $value / 100;
    }
+   unset($value); 
    
    $s = 0 - $score;
    $rand_b = (((mt_rand(0,1000)/1000) * ($v * 2)) - $v) + $b;
@@ -46,6 +47,7 @@ if (isset($_POST['score']) && isset($_POST['id'])) {
         $p = $rand_b * pow($m[3], $s - $r[1]) * pow($m[3], $r[1]);
     }
     
+    $p = round($p, 2);
 }
 
 ?>

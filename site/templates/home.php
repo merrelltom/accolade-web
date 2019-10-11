@@ -55,7 +55,7 @@ if (array_key_exists('trophy_id', $id_val)) {
               </figure>
               <?php endif;?>
             </li> 
-            <?php if ($screen->description()):?>
+            <?php if ($screen->description()->length(10)):?>
             <li><?= $screen->description();?></li>
             <?php endif;?>
             <input type="checkbox" name="start" value="0" class="invisible" checked>

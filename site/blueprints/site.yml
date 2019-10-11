@@ -114,6 +114,12 @@ columns:
       # Since the error page's blueprint is set to `read: false`, it wouldn't show up here even if you added the error blueprint to the templates list
       pages:
         type: pages
+        templates:
+          - default
+          - start screen
+          - home
+          - results
+          - online_payment_end
       trophies:
         type: pages
         templates: trophy

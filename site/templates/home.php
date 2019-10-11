@@ -1,4 +1,15 @@
-<?php snippet('header') ?>
+<?php snippet('header'); 
+//Get available trophy:
+$db = new SQLite3('assets/db/simple_postcode.db', SQLITE3_OPEN_READWRITE);
+$statement = $db->prepare("SELECT trophy_id FROM results WHERE paid = 1 ORDER BY trophy_id DESC LIMIT 1");
+$statement->execute();
+$id_val = $result->fetchArray(SQLITE3_ASSOC);
+if (array_key_exists('trophy_id', $id_val)) {
+    $id = ($id_val['trophy_id']);
+} else {
+    $id = 1;
+}
+?>
 <div id="total-bar" style="display:none;position: fixed; top:0; left:0; height:15px; padding: 0 5px 0; background:black; text-align: center; color: white; line-height: 15px; font-size: 10px;">Running total:0, price: £0.00</div>
 <form method="post" name="accolade-pricing-form" id="accolade-pricing-form" action="<?= $pages->find('results-page')->url();?>">   
   
@@ -23,8 +34,8 @@
     <?php endif; ?>
 
   <?php //// Tophy Display //// 
-    $ID = 1;
-    $screen = $pages->findBy('id', $ID);
+//    $id = 1;
+    $screen = $pages->findBy('id', $id);
     if($screen):?>
     <section id="trophy-display" class="screen trophy-display simple">
       <div class="screen-content">

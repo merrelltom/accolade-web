@@ -26,7 +26,7 @@
       <p>Your purchase number is:</p>
       <p id="payment-number" class="xl-text">
       <?php if (isset($_POST['id'])) {
-          $id = filter_input(INPUT_POST, "id");
+          $id = filter_input(INPUT_POST, "customer_id");
           $db = new SQLite3('assets/db/simple_postcode.db', SQLITE3_OPEN_READWRITE);
           $statement = $db->prepare("UPDATE results set paid=1 WHERE id=:id");
           $statement->bindParam(':id', $id);

@@ -1,10 +1,15 @@
-//var stripe = Stripe('pk_test_Zko2pCiERVKRRHiD69eTsZ2z00MuTeMrFi');
-var stripe = Stripe('pk_live_1BFkrKAfN882zpq3dKttfb0i00iLxzent7');
+var stripe = Stripe('pk_test_Zko2pCiERVKRRHiD69eTsZ2z00MuTeMrFi');
+//var stripe = Stripe('pk_live_1BFkrKAfN882zpq3dKttfb0i00iLxzent7');
 
 var elements = stripe.elements();
 var cardElement = elements.create('card');
 cardElement.mount('#card-element');
 var cardholderName = document.getElementById('cardholder-name');
+var address1 = document.getElementById('cardholder-address1');
+var address2 = document.getElementById('cardholder-address2');
+var city = document.getElementById('cardholder-city');
+var county = document.getElementById('cardholder-county');
+var phone = document.getElementById('cardholder-phone');
 var cardholderEmail = document.getElementById('cardholder-email');
 var cardButton = document.getElementById('card-button');
 var clientSecret = cardButton.dataset.secret;
@@ -17,7 +22,17 @@ form.addEventListener('submit', function(event) {
       payment_method_data: {
         billing_details: {name: cardholderName.value}
       },
-      receipt_email: cardholderEmail.value
+      receipt_email: cardholderEmail.value,
+      shipping: {
+          name: cardholderName.value,
+          address: {
+              line1: address1.value,
+              line2: address2.value,
+              city: city.value,
+              county: county.value
+          },
+          phone: phone.value
+      }
     }
   ).then(function(result) {
     if (result.error) {
